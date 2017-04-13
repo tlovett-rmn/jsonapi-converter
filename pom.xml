@@ -10,7 +10,7 @@
 
 	<groupId>com.github.jasminb.rmn</groupId>
 	<artifactId>jsonapi-converter</artifactId>
-	<version>0.7</version>
+	<version>0.8-SNAPSHOT</version>
 
 	<name>JSONAPI Converter</name>
 	<description>
@@ -143,7 +143,7 @@
 		<connection>scm:git:https://github.com/tlovett-rmn/jsonapi-converter</connection>
 		<developerConnection>scm:git:ssh://git@github.com/tlovett-rmn/jsonapi-converter.git</developerConnection>
 		<url>https://github.com/tlovett-rmn/jsonapi-converter</url>
-		<tag>jsonapi-converter-0.7</tag>
+		<tag>HEAD</tag>
 	</scm>
 
 	<developers>
