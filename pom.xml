@@ -1,10 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.github.jasminb</groupId>
+	<parent>
+		<groupId>com.rmn.commons</groupId>
+		<artifactId>commons-superpom</artifactId>
+		<version>3.4</version>
+	</parent>
+
+	<groupId>com.github.jasminb.rmn</groupId>
 	<artifactId>jsonapi-converter</artifactId>
 	<version>0.7-SNAPSHOT</version>
 
@@ -43,13 +47,6 @@
 
 	</dependencies>
 
-	<distributionManagement>
-		<snapshotRepository>
-			<id>ossrh</id>
-			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
-		</snapshotRepository>
-	</distributionManagement>
-
 	<build>
 		<plugins>
 			<plugin>
@@ -58,6 +55,14 @@
 				<configuration>
 					<source>1.7</source>
 					<target>1.7</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>2.9.1</version>
+				<configuration>
+					<failOnError>false</failOnError>
 				</configuration>
 			</plugin>
 		</plugins>
@@ -135,9 +140,10 @@
 	</licenses>
 
 	<scm>
-		<connection>scm:git:https://github.com/jasminb/jsonapi-converter</connection>
-		<developerConnection>scm:git:ssh://git@github.com:jasminb/jsonapi-converter.git</developerConnection>
-		<url>https://github.com/jasminb/jsonapi-converter</url>
+		<connection>scm:git:https://github.com/tlovett-rmn/jsonapi-converter</connection>
+		<developerConnection>scm:git:ssh://git@github.com/tlovett-rmn/jsonapi-converter.git</developerConnection>
+		<url>https://github.com/tlovett-rmn/jsonapi-converter</url>
+		<tag>HEAD</tag>
 	</scm>
 
 	<developers>
@@ -149,4 +155,15 @@
 			</roles>
 		</developer>
 	</developers>
+
+	<repositories>
+		<repository>
+			<id>rmn-releases</id>
+			<name>RMN Release Repository</name>
+			<url>https://maven.pkg.rmn.io/repository/releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 </project>
